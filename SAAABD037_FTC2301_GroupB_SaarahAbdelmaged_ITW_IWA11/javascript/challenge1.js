@@ -6,21 +6,6 @@ const 1-donuts: document(donuts),
 const 1-pancakes: document(pancakes),
 const 1-status: document(status)
 
-
-
-
-const root1 = document.querySelector('[data-key="order1"]');
-const biscuits1 = document.querySelector('[data-key="order1"] .biscuits');
-const donuts1 = document.querySelector('[data-key="order1"] .donuts');
-const pancakes1 = document.querySelector('[data-key="order1"] .pancakes');
-const status1 = document.querySelector('[data-key="order1"] .status')
-
-
-
-
-
-
-
 const 2-root = document(order2),
 const 2-biscuits: document(biscuits),
 const 2-donuts: document(donuts),
