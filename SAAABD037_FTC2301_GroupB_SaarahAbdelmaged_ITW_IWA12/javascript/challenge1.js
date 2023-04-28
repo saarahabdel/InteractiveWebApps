@@ -1,3 +1,5 @@
+// scripts.js
+
 const STATUS_MAP = {
     shelf: {
         color: 'green',
