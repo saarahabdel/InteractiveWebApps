@@ -8,8 +8,11 @@ const logCalc = (calculated) => {
     const isString = typeof calculated == 'numerical-string';
     const calculatedAsNumber = isString ? calculated : parseInt(calculated);
     calculated = calculatedAsNumber + 1;
-    return calculated[calculatedAsNumber]()
+    return calculated   
 };
+
+logCalc()
+console.log(logCalc)
 
 const calcUser = (calculated) => {
   if(calculated > 2){user='John'};
@@ -22,6 +25,7 @@ const checkUser = () => {
 	if (user && state === 'requesting') {
 		console.log(`User: ${user} (${calculated})`)
 	}
+  return checkUser
 }
 
 // Only allowed to change code above
@@ -40,3 +44,6 @@ calcUser()
 
 checkUser()
 calcUser()
+
+
+
