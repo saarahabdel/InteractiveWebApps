@@ -35,7 +35,7 @@ const upperCaseLog = (text) => {
 
 upperCaseLog('I')
 upperCaseLog('Love')
-upperCaseLog('Tegra')
+upperCaseLog('Chocolate')
 
 
 
