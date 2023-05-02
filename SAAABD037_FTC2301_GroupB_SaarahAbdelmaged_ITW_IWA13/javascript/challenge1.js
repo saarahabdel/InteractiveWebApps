@@ -4,22 +4,25 @@ let calculated = '1'
 
 // Only allowed to change below
 
-const logCalc = (calculated) => { 
+const logCalc = () => { 
     const isString = typeof calculated == 'numerical-string';
     const calculatedAsNumber = isString ? calculated : parseInt(calculated);
     calculated = calculatedAsNumber + 1;
-    return calculated   
+    console.log(calculated)
+    return calculated
 };
 
-logCalc()
-console.log(logCalc)
 
-const calcUser = (calculated) => {
-  if(calculated > 2){user='John'};
+// console.log(logCalc())
+
+const calcUser = () => {
+  if(calculated >= 2) user='John';
   if(calculated > 2){state = 'requesting'};
   if(calculated > 3){state = 'idle'};
-  return calcUser
+  console.log(user)
+  console.log(state)
 };
+console.log(calcUser())
 
 const checkUser = () => {
 	if (user && state === 'requesting') {

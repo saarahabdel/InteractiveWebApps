@@ -19,13 +19,13 @@
 // Functions accept arguments/parameters 
 
 //EXAMPLE 2
-const customLog = () => {
-    const text ='Hello World'
-    const upperText = text.toUpperCase()
-    console.log(upperText)
-}
+// const customLog = () => {
+//     const text ='Hello World'
+//     const upperText = text.toUpperCase()
+//     console.log(upperText)
+// }
 
-customLog()
+// customLog()
 
 // //EXAMPLE 3
 // const upperCaseLog = (text) => {
@@ -48,16 +48,16 @@ customLog()
 //  */
 // // above will be enforced so that an error appears if you pass anything thats not a string
 
-// const randomCase = (text) => {
+const randomCase = (text) => {
     
-//     const isUpper = Math.random() >= 0.5 //going to give us a 50/50 chance for is upper to be true or false 
-//     const method = isUpper ? 'toUpperCase' : 'toLowerCase'
-//     // const result = text[method]() // we can pass a variable in square brackets depending on what method is it'll use that one, we also need to call the function afterwards(with parenthesis)
-//     // console.log(result)
-//     return text[method]()
-// }
-
-// console.log(randomCase('Schalk'))
+    const isUpper = Math.random() >= 0.5 //going to give us a 50/50 chance for is upper to be true or false 
+    const method = isUpper ? 'toUpperCase' : 'toLowerCase'
+    const result = text[method]() // we can pass a variable in square brackets depending on what method is it'll use that one, we also need to call the function afterwards(with parenthesis)
+    console.log(result)
+    return text[method]()
+}
+randomCase('Schalk')
+console.log(randomCase('Schalk'))
 // console.log(randomCase('Hello'))
 // console.log(randomCase('dashbsdfjbk'))
 // //if we didnt have return, the above would result to undefined
