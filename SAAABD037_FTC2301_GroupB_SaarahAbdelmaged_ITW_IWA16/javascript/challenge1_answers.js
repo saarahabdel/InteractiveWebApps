@@ -68,28 +68,35 @@ const data = {
 const createHtml = (athlete) => {
     const { firstName, surname, id, races } = data.response.data[athlete]
     races.reverse()
-    const date = new Date(races[0].date)
+    const date = new Date(races[0].date) //created new date
     const time = races[0].time
 
     const fragment = document.createDocumentFragment();
 
-    const title = document.createElement("h2");
+    const title = document.createElement("h2"); //h2 in inverted commmas
 
     title.textContent = data.response.data[athlete].id
 
     fragment.appendChild(title);
 
-    const list = document.createElement("dl");
+    const list = document.createElement("dl"); //dl in inverted commas
+  
 
     const day = date.getDate();
     const month = date.toLocaleString("en-US", { month: "short"} )
-    const year = date.getFullYear();
+    const year = date.getFullYear(); //used correct syntax: .getFullYear() instead of .year
 
-    const [first, second, third, fourth] = time;
+    const [first, second, third, fourth] = time; //destructuring expression
     let total = first + second + third + fourth;
 
     const hours = Math.floor(total / 60);
     const minutes = (total%60)
+
+    /**
+     * seperated <dd>${firstName surname}</dd>  --- interpolation
+     * added length property to <dd>${races}</dd>
+     * seperated <dd>${day month year}</dd>  --- interpolation
+     */
 
     list.innerHTML = /* html */ `
     <dt>Athlete</dt>
