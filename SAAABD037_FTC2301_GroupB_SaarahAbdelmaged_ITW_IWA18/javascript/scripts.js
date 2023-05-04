@@ -84,10 +84,12 @@ const handleHelpToggle = (event) => {
 const handleAddToggle = (event) => {
     const { target } = event;
 
+    /* to bring the add items to menu overlay page */
     if (target == html.other.add) {
         html.add.overlay.showModal()
     }
 
+    /* the cancel button will remove the overlay add to menu page */
     if (target == html.add.cancel) {
         html.add.overlay.close()
     }
@@ -145,6 +147,7 @@ const handleEditSubmit = (event) => {
     event.preventDefault();
     const order = document.querySelector('.order')
     order.remove()
+    /* created the data object required for the createOrderData function */
     const data = {
         title: html.edit.title.value,
         table: html.edit.table.value,
